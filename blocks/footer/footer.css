@@ -70,7 +70,7 @@ div.sub-footer .social-icons li {
   margin-left: 20px;
 }
 
-div.sub-footer .ic-facebook a:before {
+div.sub-footer .ic-facebook a::before {
   content: "\e093";
   line-height: 1;
   color: var(--text-color);
@@ -80,13 +80,13 @@ div.sub-footer a > span  {
   display: none;
 }
 
-div.sub-footer .ic-twitter a:before {
+div.sub-footer .ic-twitter a::before {
   content: "\e094";
   line-height: 1;
   color: var(--text-color);
 }
 
-div.sub-footer .ic-instagram a:before {
+div.sub-footer .ic-instagram a::before {
   content: "\e09a";
   line-height: 1;
   color: var(--text-color);
