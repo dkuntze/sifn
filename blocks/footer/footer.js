@@ -31,7 +31,7 @@ export default async function decorate(block) {
     socialIcons.append(footer.querySelector('ul:nth-child(2)'));
 
     socialIcons.querySelectorAll('a').forEach((a) => {
-      if (a.textContent == 'Facebook') {
+      if (a.textContent === 'Facebook') {
         a.closest('li').classList.add('ic-facebook');
         const fbSpan = document.createElement('span');
         fbSpan.textContent = a.textContent;
@@ -39,7 +39,7 @@ export default async function decorate(block) {
         a.append(fbSpan);
       }
 
-      if (a.textContent == 'Instagram') {
+      if (a.textContent === 'Instagram') {
         a.closest('li').classList.add('ic-instagram');
         const igSpan = document.createElement('span');
         igSpan.textContent = a.textContent;
@@ -47,7 +47,7 @@ export default async function decorate(block) {
         a.append(igSpan);
       }
 
-      if (a.textContent == 'Twitter') {
+      if (a.textContent === 'Twitter') {
         a.closest('li').classList.add('ic-twitter');
         const twSpan = document.createElement('span');
         twSpan.textContent = a.textContent;
