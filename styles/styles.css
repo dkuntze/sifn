@@ -15,12 +15,12 @@
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: #fff;
-  --overlay-background-color: #eee;
+  --overlay-background-color: #fe9336;
   --highlight-background-color: #ccc;
   --text-color: #000;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
+  --body-font-family: 'Merriweather Sans', helvetica, ubuntu, roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -222,6 +222,14 @@ main img {
 
 main .section {
   padding: 64px 16px;
+}
+
+main .section.our-supporters {
+  text-align: center;
+}
+
+main .section.our-supporters h2 {
+  text-transform: uppercase;
 }
 
 @media (min-width: 600px) {
