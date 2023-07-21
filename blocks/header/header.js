@@ -135,11 +135,27 @@ export default async function decorate(block) {
     // prevent mobile nav behavior on window resize
     toggleMenu(nav, navSections, isDesktop.matches);
     isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+    const navTools = document.createElement('div');
+    navTools.className = 'top-nav';
+    navTools.append(...nav.querySelectorAll('.nav-tools'));
 
     decorateIcons(nav);
     const navWrapper = document.createElement('div');
     navWrapper.className = 'nav-wrapper';
+    navWrapper.append(navTools);
     navWrapper.append(nav);
     block.append(navWrapper);
   }
 }
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById('nav').style.height = '54px';
+    document.getElementById('nav').classList.add('nav-scroll');
+  } else {
+    document.getElementById('nav').style.height = '86px';
+    document.getElementById('nav').classList.remove('nav-scroll');
+  }
+}
+
+// eslint-disable-next-line func-names
+window.onscroll = function () { scrollFunction(); };

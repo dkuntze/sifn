@@ -15,10 +15,11 @@ header nav {
   align-items: center;
   gap: 0 2em;
   margin: auto;
-  max-width: 1264px;
+  max-width: 960px;
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+  transition: background-color .4s, color .4s, transform .4s, opacity .4s, ease-in-out;
 }
 
 header nav[aria-expanded="true"] {
@@ -148,8 +149,16 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  width: auto;
+  display: inline-block;
+  height: 77px;
+  max-height: 90%;
+  transition: all .4s ease-in-out;
+  background-clip: border-box;
+}
+
+header nav.nav-scroll img {
+    height: 48px;
 }
 
 /* sections */
@@ -172,6 +181,7 @@ header nav .nav-sections ul  {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+  justify-content: right;
 }
 
 header nav .nav-sections ul > li {
@@ -223,11 +233,23 @@ header nav .nav-sections ul > li > ul > li {
     transform: rotate(315deg);
   }
 
+  header .top-nav ul {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 1rem;
+    margin: 0;
+  }
+
   header nav .nav-sections ul {
     display: flex;
     gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);
+  }
+
+  header .top-nav li {
+    display: inline;
+    margin-right: 15px;
   }
 
   header nav .nav-sections > ul > li {
@@ -270,6 +292,16 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 /* tools */
-header nav .nav-tools {
+header .nav-tools {
   grid-area: tools;
+  text-align: right;
+  font-size: 12px;
+  max-width: 960px;
+  color: #fff;
+  margin: auto;
+}
+
+header .top-nav {
+  background-color: #a62424;
+  padding: 9px 2rem;
 }
