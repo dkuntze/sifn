@@ -7,10 +7,46 @@
   grid-gap: 16px;
 }
 
+.cards h3 {
+  color: #000;
+}
+
+.cards p {
+  font-size: 16px;
+  color: #686463;
+}
+
 .cards > ul > li {
-  border: 1px solid var(--highlight-background-color);
   background-color: var(--background-color)
 }
+
+.blogs-resources .cards h2 {
+  text-align: left;
+  text-transform: unset;
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.blogs-resources .cards h2 > a {
+  color: #00B3E5;
+}
+
+.blogs-resources .cards > ul > li {
+  border: 1px solid #d8d8d8;
+}
+
+.cards a.button {
+  background-color: #00B3E5;
+  font-weight: 500;
+  padding-left: 0.7rem;
+  padding-right: 11.2px;
+}
+
+.cards a.button::after {
+  content: "→";
+  margin-left: 0.5rem;
+}
+
 
 .cards .cards-card-body {
   margin: 16px;
